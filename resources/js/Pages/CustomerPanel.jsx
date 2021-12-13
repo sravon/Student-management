@@ -60,7 +60,7 @@ export default function CustomerPanel() {
                         }
                     </div>
                     <div className="col-md-8">
-                        <h2 className="text-center text-success pt-3">Course Info</h2>
+                        <h2 className="text-center text-success pt-3">List</h2>
                         <table className="table table-striped">
                             <thead>
                                 <tr>

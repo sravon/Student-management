@@ -38,7 +38,7 @@ export default function AddGrade(props) {
         Axios.post('grades/',data).then(response => {
             if(response.status == 200){
                 console.log(response)
-                //props.data()
+                props.data()
                 
             }else if(response.status == 201){
                 console.log(response);
@@ -86,10 +86,6 @@ export default function AddGrade(props) {
                         {(courses.length >= 0)?(courses.map( (e,i) => (
                             <option key={e.id} value={e.id}>{e.course_code}</option>
                         ))):null}
-                        <option value="cse215" >Cse215</option>
-                        <option value="ab+" >AB+</option>
-                        <option value="b+" >B+</option>
-                        <option value="o+" >O+</option>
                     </select>
                 </div>
                 <div className="form-group">
@@ -100,14 +96,15 @@ export default function AddGrade(props) {
                     >
                         <option>Default select</option>
                         <option value="fall-21" >Fall 21</option>
-                        <option value="ab+" >AB+</option>
-                        <option value="b+" >B+</option>
-                        <option value="o+" >O+</option>
+                        <option value="summer-21" >Summer-21</option>
+                        <option value="spring-21" >Spring-21</option>
+                        <option value="fall-20" >Fall-20</option>
                     </select>
                 </div>
                 <div className="form-group">
                     <label >Section</label>
-                    <input type="text" className="form-control" aria-describedby="emailHelp" placeholder="Enter email"
+                    <input type="text" className="form-control" aria-describedby="emailHelp" 
+                        placeholder="Enter Section"
                     value={grade.section} 
                     onChange={e =>setgrade({...grade,section:e.target.value})}/>
                 </div>
@@ -119,9 +116,9 @@ export default function AddGrade(props) {
                     >
                         <option>Default select</option>
                         <option value="4.00" >A</option>
-                        <option value="ab+" >AB+</option>
-                        <option value="b+" >B+</option>
-                        <option value="o+" >O+</option>
+                        <option value="3.87" >A-</option>
+                        <option value="3.50" >B+</option>
+                        <option value="3" >B</option>
                     </select>
                 </div>
                 

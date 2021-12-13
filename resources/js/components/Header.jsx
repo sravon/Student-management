@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Header() {
+  const his = useNavigate();
     const logout = () =>{
         localStorage.removeItem('user_id');
         localStorage.removeItem('name');
@@ -19,10 +20,11 @@ export default function Header() {
   </button>
   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div className="navbar-nav">
-      <Link className="nav-item nav-link active" to="/">Home <span className="sr-only">(current)</span></Link>
+      <Link className="nav-item nav-link active" to="/home">Home <span className="sr-only">(current)</span></Link>
       <Link className="nav-item nav-link" to="/grade">Grades</Link>
       <Link className="nav-item nav-link" to="/course">Courses</Link>
       <Link className="nav-item nav-link" to="/customers">Customers</Link>
+      <Link className="nav-item nav-link" to="/students">Students</Link>
     </div>
   </div>
   <button className="btn btn-outline-danger" onClick={logout}>Logout</button>

@@ -115,4 +115,13 @@ class StudentsController extends Controller
             return response( "Delete Successfull" , 200);
         }
     }
+
+    public function studentsearch($stuid){
+        $st = Student::where('student_id',$stuid)->first();
+        if($st)
+            return response($st,200);
+        else
+        return response("no result found",201);
+    }
+
 }

@@ -24,6 +24,7 @@ use App\Http\Controllers\Api\CustomerController;
 //     return $request->user();
 // });
 
+Route::get('studentsearch/{stuid}', [StudentsController::class,'studentsearch']);
 Route::resource('users',AuthController::class);
 Route::resource('educations',EducationsController::class);
 Route::resource('students',StudentsController::class);
