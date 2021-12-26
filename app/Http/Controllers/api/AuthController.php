@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -117,6 +118,17 @@ class AuthController extends Controller
         }else{
             return response("user not found", 201);
         }
+    }
+
+    public function checkUser(Request $request)
+    {
+        $email = $request->input('email');
+        
+        $result = DB::table('users')
+              ->where('email', $email)->get();
+        if($result)
+            return response($result,200);
+
     }
 
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\StudentsController;
 use App\Http\Controllers\Api\GradesController;
 use App\Http\Controllers\Api\CoursesController;
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Api\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,6 @@ Route::resource('students',StudentsController::class);
 Route::resource('grades',GradesController::class);
 Route::resource('courses',CoursesController::class);
 Route::resource('customers',CustomerController::class);
+Route::resource('clients',ClientController::class);
 Route::post('users/login', [AuthController::class, 'loginuser']);
+Route::post('users/checkuser', [AuthController::class, 'checkUser']);

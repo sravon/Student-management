@@ -25,6 +25,7 @@ export default function Header() {
       <Link className="nav-item nav-link" to="/course">Courses</Link>
       <Link className="nav-item nav-link" to="/customers">Customers</Link>
       <Link className="nav-item nav-link" to="/students">Students</Link>
+      <Link className="nav-item nav-link" to="/clients">Clients</Link>
     </div>
   </div>
   <button className="btn btn-outline-danger" onClick={logout}>Logout</button>

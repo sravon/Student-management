@@ -71,7 +71,9 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <Link to="registration" className="btn btn-primary mr-2">registration</Link>
+                                
                                 <button type="submit" className="btn btn-primary float-right mr-2">Sign in</button>
+                                <Link to="forget" className="float-right mr-2">Forget Password? </Link>
                             </form>
                         </div>
                     </div>

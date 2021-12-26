@@ -9,6 +9,8 @@ import GradePanel from './Pages/GradePanel'
 import CoursePanel from './Pages/CoursePanel'
 import CustomerPanel from './Pages/CustomerPanel';
 import StudentPanel from './Pages/StudentPanel';
+import ForgetPanel from './Pages/ForgetPanel';
+import ClientPanel from './Pages/ClientPanel';
 
 function Root() {
     return (
@@ -22,6 +24,8 @@ function Root() {
             <Route exact path="/course" element={<CoursePanel/>}/>
             <Route exact path="/customers" element={<CustomerPanel/>}/>
             <Route exact path="/students" element={<StudentPanel/>}/>
+            <Route exact path="/forget" element={<ForgetPanel/>}/>
+            <Route exact path="/clients" element={<ClientPanel/>}/>
           </Routes>
         </BrowserRouter>
     );
